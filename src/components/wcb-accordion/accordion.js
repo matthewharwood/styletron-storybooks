@@ -7,7 +7,9 @@ export class Accordion extends Component<*> {
   render() {
 
     return (
-      <RedAnchor>WTF</RedAnchor>
+      <div>
+        WTF2
+      </div>
     );
   }
 }

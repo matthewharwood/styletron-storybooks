@@ -50,10 +50,13 @@ configureViewport({
   viewports: newViewports
 });
 
+const req = require.context('../src/components/', true, /.story\.js$/);
+
 function loadStories() {
-  require('../src/stories/index.js');
-  // You can require as many stories as you need.
+  req.keys().forEach(req)
 }
+
+configure(loadStories, module);
 
 configureActions({
   depth: 100,
@@ -139,6 +142,7 @@ setOptions({
 
 addDecorator(checkA11y);
 addDecorator(story => (
+
   <StyletronProvider value={engine}>
     {story()}
   </StyletronProvider>

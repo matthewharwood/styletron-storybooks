@@ -9,15 +9,21 @@
     "docs": "documentation serve src/components/wcb-accordion/sum.js",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "start": "npm run storybook",
-    "test": "jest",
-    "test:output": "jest --json --outputFile=.jest-test-results.json"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@storybook/addon-a11y": "^3.4.8",
-    "@storybook/react": "^3.4.8",
+    "@storybook/addon-a11y": "^4.0.0-alpha.14",
+    "@storybook/addon-actions": "^3.4.8",
+    "@storybook/addon-backgrounds": "4.0.0-alpha.14",
+    "@storybook/addon-info": "^3.4.8",
+    "@storybook/addon-knobs": "^3.4.8",
+    "@storybook/addon-notes": "4.0.0-alpha.14",
+    "@storybook/addon-options": "^3.4.8",
+    "@storybook/addon-viewport": "^4.0.0-alpha.14",
+    "@storybook/react": "^4.0.0-alpha.14",
     "babel-jest": "^23.4.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
@@ -25,8 +31,7 @@
     "flow-bin": "^0.77.0",
     "jest": "^23.4.1",
     "react-docgen": "^2.21.0",
-    "react-test-renderer": "^16.4.1",
-    "storybook-addon-jest": "^0.0.1"
+    "react-test-renderer": "^16.4.1"
   },
   "dependencies": {
     "babel-core": "^6.26.3",

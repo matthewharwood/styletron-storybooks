@@ -1,30 +1,25 @@
 import React from 'react';
-import {storiesOf, addDecorator} from '@storybook/react';
-import {action} from '@storybook/addon-actions';
-import { checkA11y } from '@storybook/addon-a11y';
+import {storiesOf} from '@storybook/react';
 
-import {Client as Styletron} from 'styletron-engine-atomic';
-import {Provider as StyletronProvider} from 'styletron-react';
-// import withTests from 'storybook-addon-jest';
-// import jestTestResults from '../../.jest-test-results.json';
-// .addDecorator(withTests(jestTestResults, { filesExt: '.test.js' })('Accordion'))
 import {Accordion} from "../components/wcb-accordion/accordion";
-
-const engine = new Styletron();
+import {action} from '@storybook/addon-actions';
+import { boolean, text } from '@storybook/addon-knobs'
 
 storiesOf('Accordion', module)
-  .addDecorator(story => (
-    <StyletronProvider value={engine}>
-      {story()}
-    </StyletronProvider>
-  ))
-  .addDecorator(checkA11y)
-
   .add('with nothing', () => (
-    <Accordion/>
+    <button>
+      Accessible button
+    </button>
+  ), { notes: 'some notes one this' })
+  .add('with a button', () => (
+    <button disabled={boolean('Disabled', false)} >
+      {text('Label', 'Hello Storybook')}
+    </button>
   ))
   .add('with text', () => (
-    <Accordion onClick={action('clicked')}>Hello Button</Accordion>
+    <button style={{backgroundColor: 'red', color: 'darkRed',}}>
+      Inaccessible button
+    </button>
   ))
   .add('with some emoji', () => (
     <Accordion onClick={action('clicked')}><span role="img" aria-label="so cool">😀 😎 👍 💯</span></Accordion>

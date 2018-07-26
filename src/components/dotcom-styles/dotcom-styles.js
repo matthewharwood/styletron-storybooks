@@ -1,4 +1,3 @@
-// @flow
 export const values = {
   animation: {
     uiSpeed: 'all 250ms ease',

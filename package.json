@@ -5,18 +5,28 @@
   "main": "index.js",
   "scripts": {
     "prestart": "npm run typecheck",
-    "typecheck": "flow check packages",
+    "typecheck": "flow check src/components",
+    "docs": "documentation serve src/components/wcb-accordion/sum.js",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "start": "npm run storybook",
-    "test": "jest"
+    "test": "jest",
+    "test:output": "jest --json --outputFile=.jest-test-results.json"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@storybook/addon-a11y": "^3.4.8",
     "@storybook/react": "^3.4.8",
+    "babel-jest": "^23.4.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "documentation": "^8.0.2",
     "flow-bin": "^0.77.0",
-    "jest": "^23.4.1"
+    "jest": "^23.4.1",
+    "react-docgen": "^2.21.0",
+    "react-test-renderer": "^16.4.1",
+    "storybook-addon-jest": "^0.0.1"
   },
   "dependencies": {
     "babel-core": "^6.26.3",

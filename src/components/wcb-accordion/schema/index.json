@@ -1,0 +1,140 @@
+{
+  "title": "Billboard - Standard",
+  "fields": [
+    {
+      "field": "backgroundColor",
+      "label": "Background Color",
+      "required": false,
+      "type": "BACKGROUND_COLOR"
+    },
+    {
+      "field": "hrColor",
+      "label": "Horizontal Rule Color",
+      "required": false,
+      "type": "BACKGROUND_COLOR"
+    },
+    {
+      "field": "breadcrumb",
+      "label": "Breadcrumbs",
+      "required": false,
+      "type": "OBJECT",
+      "itemSchema": {
+        "fields": [{
+          "field": "items",
+          "label": "Items",
+          "required": false,
+          "type": "ARRAY",
+          "itemSchema": {
+            "fields": [{
+              "field": "text",
+              "label": "Title",
+              "required": true,
+              "type": "TEXT_LINE"
+            },
+            {
+              "field": "href",
+              "label": "Link",
+              "required": true,
+              "type": "TEXT_LINE"
+            }]
+          }
+        }]
+      }
+    },
+    {
+      "field": "heading",
+      "label": "Heading",
+      "required": false,
+      "type": "TEXT_LINE"
+    },
+    {
+      "field": "body",
+      "label": "Body",
+      "required": false,
+      "type": "MARKDOWN"
+    },
+    {
+      "field": "photo",
+      "label": "Photo",
+      "required": false,
+      "type": "PHOTO",
+      "photoType": "WCB2_VARIABLE"
+    },
+    {
+      "field": "illustration",
+      "label": "Illustration",
+      "required": false,
+      "type": "ILLUSTRATION",
+      "illustrationType": "WCB2_VARIABLE_ILL"
+    },
+    {
+      "field": "buttonItems",
+      "label": "CTAs",
+      "required": false,
+      "type": "OBJECT",
+      "itemSchema": {
+        "groupings": [{
+          "type": "button:link",
+          "label": "CTA 1",
+          "required": false,
+          "fields": {
+            "button": "primary",
+            "link": "secondary"
+          }
+        }, {
+          "type": "button:link",
+          "label": "CTA 2",
+          "required": false,
+          "fields": {
+            "button": "primaryAlt",
+            "link": "secondaryAlt"
+          }
+        }],
+        "fields": [
+          {
+            "field": "primary",
+            "label": "Primary",
+            "required": false,
+            "type": "TEXT_LINK"
+          },
+          {
+            "field": "primaryAlt",
+            "label": "Primary",
+            "required": false,
+            "type": "TEXT_LINK"
+          },
+          {
+            "field": "secondary",
+            "label": "Secondary",
+            "required": false,
+            "type": "TEXT_LINK"
+          },
+          {
+            "field": "secondaryAlt",
+            "label": "Secondary",
+            "required": false,
+            "type": "TEXT_LINK"
+          },
+          {
+            "field": "textLink",
+            "label": "Text Link 1",
+            "required": false,
+            "type": "TEXT_LINK"
+          },
+          {
+            "field": "textLinkAlt",
+            "label": "Text Link 2",
+            "required": false,
+            "type": "TEXT_LINK"
+          }
+        ]
+      }
+    },
+    {
+      "field": "anchorName",
+      "label": "Anchor Point Name",
+      "required": false,
+      "type": "SLUG"
+    }
+  ]
+}

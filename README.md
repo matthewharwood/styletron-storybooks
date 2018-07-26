@@ -3,3 +3,7 @@ At Classpath root run:
 
 then
 `yarn dev`
+
+
+watch jest:
+`npm run test:output -- --watch`

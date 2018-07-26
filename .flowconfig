@@ -1,0 +1,13 @@
+[ignore]
+.*/node_modules/.*[^(package)]\.json$
+
+[include]
+./packages/
+
+[libs]
+
+[lints]
+
+[options]
+
+[strict]

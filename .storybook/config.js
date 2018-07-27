@@ -10,6 +10,13 @@ import {setOptions} from '@storybook/addon-options';
 import {withNotes} from '@storybook/addon-notes';
 import {withBackgrounds} from '@storybook/addon-backgrounds';
 
+const engine = new Styletron();
+addDecorator(story => (
+  <StyletronProvider value={engine}>
+    {story()}
+  </StyletronProvider>
+));
+addDecorator(checkA11y);
 addDecorator(
   withBackgrounds([
     {name: 'default', value: '#ffffff', default: true},
@@ -17,10 +24,7 @@ addDecorator(
     {name: 'carbon', value: '#3b5998'},
   ])
 );
-
-
 addDecorator(withNotes);
-const engine = new Styletron();
 const newViewports = {
   default: {
     name: 'Responsive',
@@ -50,13 +54,7 @@ configureViewport({
   viewports: newViewports
 });
 
-const req = require.context('../src/components/', true, /.story\.js$/);
 
-function loadStories() {
-  req.keys().forEach(req)
-}
-
-configure(loadStories, module);
 
 configureActions({
   depth: 100,
@@ -140,13 +138,14 @@ setOptions({
   enableShortcuts: false, // true by default
 });
 
-addDecorator(checkA11y);
-addDecorator(story => (
-
-  <StyletronProvider value={engine}>
-    {story()}
-  </StyletronProvider>
-));
-
 addDecorator(withKnobs);
+
+
+const req = require.context('../src/components/', true, /.story\.js$/);
+
+function loadStories() {
+  req.keys().forEach(req)
+}
+
+configure(loadStories, module);
 configure(loadStories, module);

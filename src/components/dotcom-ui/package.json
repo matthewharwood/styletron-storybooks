@@ -9,5 +9,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@matthewharwood/dotcom-styles": "^1.0.0",
+    "styletron-react": "^4.3.4"
+  }
 }

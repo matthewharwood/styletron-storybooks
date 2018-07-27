@@ -1,1 +1,1 @@
-export {CtaLink} from './cta-links';
+export {CtaLink} from './cta-links/cta-links';

@@ -8,7 +8,13 @@
     "docs": "documentation serve src/components/wcb-accordion/sum.js",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "start": "npm run storybook",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "jest": {
+    "setupFiles": ["./jestsetup.js"],
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
   },
   "keywords": [],
   "author": "",

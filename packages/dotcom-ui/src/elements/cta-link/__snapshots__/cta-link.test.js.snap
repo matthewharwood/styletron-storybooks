@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render a CtaLink 1`] = `
+<Styled(a)
+  $size="lead"
+  $style="button"
+  aria-label=""
+  href="http://www.google.com"
+>
+  1234 Test
+</Styled(a)>
+`;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Accordion} from './';
+import {Accordion} from './index';
 import {Client as Styletron} from 'styletron-engine-atomic';
 import {Provider as StyletronProvider} from 'styletron-react';
 

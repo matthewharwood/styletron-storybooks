@@ -1,0 +1,40 @@
+0 silly input [ 'build' ]
+1 silly flags { _: [ 'run' ],
+1 silly flags   'reject-cycles': false,
+1 silly flags   rejectCycles: false,
+1 silly flags   script: 'build',
+1 silly flags   args: [] }
+2 verbose rootPath /Users/mharwo/udev/storybook/dotcom-components
+3 info version 2.11.0
+4 silly existsSync /Users/mharwo/udev/storybook/dotcom-components/VERSION
+5 info versioning independent
+6 silly initialize attempt
+7 silly initialize success
+8 silly execute attempt
+9 silly runScriptInDir build [] dotcom-styles
+10 silly getExecOpts { cwd: '/Users/mharwo/udev/storybook/dotcom-components/src/components/dotcom-styles' }
+11 silly runScriptInDir build [] dotcom-ui
+12 silly getExecOpts { cwd: '/Users/mharwo/udev/storybook/dotcom-components/src/components/dotcom-ui' }
+13 silly runScriptInDir build [] wcb3-accordion
+14 silly getExecOpts { cwd: '/Users/mharwo/udev/storybook/dotcom-components/src/components/wcb3-accordion' }
+15 error build Errored while running script in '@matthewharwood/wcb3-accordion'
+16 error execute callback with error
+17 error Error: Command failed: npm run build
+17 error index.js doesn't exist
+17 error npm ERR! code ELIFECYCLE
+17 error npm ERR! errno 2
+17 error npm ERR! @matthewharwood/wcb3-accordion@1.0.0 build: `babel index.js --out-dir dist --copy-files`
+17 error npm ERR! Exit status 2
+17 error npm ERR!
+17 error npm ERR! Failed at the @matthewharwood/wcb3-accordion@1.0.0 build script.
+17 error npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+17 error
+17 error npm ERR! A complete log of this run can be found in:
+17 error npm ERR!     /Users/mharwo/.npm/_logs/2018-07-27T04_50_58_238Z-debug.log
+17 error
+17 error > @matthewharwood/wcb3-accordion@1.0.0 build /Users/mharwo/udev/storybook/dotcom-components/src/components/wcb3-accordion
+17 error > babel index.js --out-dir dist --copy-files
+17 error
+17 error
+17 error     at Promise.all.then.arr (/Users/mharwo/udev/storybook/dotcom-components/node_modules/execa/index.js:236:11)
+17 error     at <anonymous>

@@ -1,15 +1,12 @@
 const path = require("path");
 const fs = require('fs');
-// Export a function. Accept the base config as the only param.
+
 module.exports = (storybookBaseConfig) => {
-  const dirPath = path.join(__dirname, "../src/components");
+  const SRC_PATH = '../src/components';
+  const dirPath = path.join(__dirname, SRC_PATH);
   const arrPath = fs.readdirSync(dirPath);
-  const notRight = (main) => {
-    return Boolean(fs.statSync(main));
-  };
 
   const alias = arrPath.filter((d) => !/^\./.test(d)).reduce((p, v) => {
-
     try {
       let PKG = path.join(dirPath, v, 'package.json');
 

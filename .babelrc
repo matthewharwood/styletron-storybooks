@@ -6,6 +6,8 @@
     "stage-2"
   ],
   "plugins": [
-    "transform-flow-comments"
+    "transform-flow-comments",
+    "transform-export-extensions"
+
   ]
 }

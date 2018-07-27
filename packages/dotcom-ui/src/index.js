@@ -1,1 +1,1 @@
-export {CtaLink} from './elements';
+export * as Elements from './elements';

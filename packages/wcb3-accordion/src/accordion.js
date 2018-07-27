@@ -10,7 +10,7 @@ export class Accordion extends Component<*> {
     console.log(dotcomStyles, 'yoooooo');
     return (
       <div>
-        WTF2
+        NOTHING TO SEE HERE.
       </div>
     );
   }

@@ -1,7 +1,6 @@
 // @flow
 import React, {Component, Fragment} from 'react';
 import {styled} from 'styletron-react';
-// $FlowFixMe
 import dotcomStyles from '@matthewharwood/dotcom-styles';
 const {headingByLevelSize} = dotcomStyles;
 
@@ -35,15 +34,8 @@ export class Heading extends Component<Props, State> {
     heading: 'heading'
   };
 
-  componentWillReceiveProps(props: Props) {
-    this.setState({valid: hasProps(props.heading, props.styleLevel, props.elementLevel)});
-  }
 
-  componentWillMount() {
-    const {heading, styleLevel, elementLevel} = this.props;
-    this.setState({valid: hasProps(heading, styleLevel, elementLevel)});
-  }
-
+ 
   render() {
     const {heading, styleLevel, elementLevel} = this.props;
     return this.state.valid &&
@@ -51,4 +43,4 @@ export class Heading extends Component<Props, State> {
   }
 }
 
-
+// <Heading elementLevel="h2" styleLevel="h3

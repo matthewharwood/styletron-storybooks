@@ -1,7 +1,6 @@
 // @flow
 import React, {Component, Fragment} from 'react';
 import {styled} from 'styletron-react';
-// $FlowFixMe
 import dotcomStyles from '@matthewharwood/dotcom-styles';
 
 const {values} = dotcomStyles;

@@ -2,14 +2,14 @@ import React from 'react';
 import {configure, addDecorator} from '@storybook/react';
 import {configureActions} from '@storybook/addon-actions';
 import {checkA11y} from '@storybook/addon-a11y';
-import {Client as Styletron} from 'styletron-engine-atomic';
-import {Provider as StyletronProvider} from 'styletron-react';
+
 import {withKnobs} from '@storybook/addon-knobs'
 import {configureViewport} from '@storybook/addon-viewport';
 import {setOptions} from '@storybook/addon-options';
 import {withNotes} from '@storybook/addon-notes';
 import {withBackgrounds} from '@storybook/addon-backgrounds';
-
+import {Client as Styletron} from 'styletron-engine-atomic';
+import {Provider as StyletronProvider} from 'styletron-react';
 const engine = new Styletron();
 addDecorator(story => (
   <StyletronProvider value={engine}>
@@ -140,12 +140,10 @@ setOptions({
 
 addDecorator(withKnobs);
 
-
-const req = require.context('../src/components/', true, /.story\.js$/);
+const req = require.context('../packages', true, /.story\.js$/);
 
 function loadStories() {
   req.keys().forEach(req)
 }
 
-configure(loadStories, module);
 configure(loadStories, module);

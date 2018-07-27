@@ -62,7 +62,16 @@ export const defaults = {
   },
 };
 
+export const headingByLevelSize = [
+  values.fontSize.heading1,
+  values.fontSize.heading2,
+  values.fontSize.heading3,
+  values.fontSize.heading4,
+  values.fontSize.heading5,
+];
+
 export default {
   defaults,
   values,
+  headingByLevelSize,
 };

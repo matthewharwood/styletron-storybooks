@@ -6,6 +6,11 @@ import {Provider as StyletronProvider} from 'styletron-react';
 const engine = new Styletron();
 
 storiesOf('Cta Link', module)
+  .addDecorator(story => (
+    <StyletronProvider value={engine}>
+      {story()}
+    </StyletronProvider>
+  ))
   .add('CTA link display', () => (
     <CtaLink />
   ));

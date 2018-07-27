@@ -2,7 +2,7 @@ const path = require("path");
 const fs = require('fs');
 
 module.exports = (storybookBaseConfig) => {
-  const SRC_PATH = '../src/components';
+  const SRC_PATH = '../packages';
   const dirPath = path.join(__dirname, SRC_PATH);
   const arrPath = fs.readdirSync(dirPath);
 
